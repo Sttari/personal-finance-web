@@ -8,12 +8,14 @@ interface ApiOptions {
     auth?: boolean; // Whether to include the auth token
 }
 
+// Custom error class for API errors
 export class ApiError extends Error {
     constructor(public status: number, public details: unknown) {
         super(`API Error: ${status}`);
     }
 }
 
+// Generic API function that can be used throughout the app to make requests to the backend
 export async function api<T = unknown>(
     path: string,
     Options: ApiOptions = {}
