@@ -19,6 +19,9 @@ export default function Home() {
           <Link href="/expenses" className="block text-blue-600">
             View expenses
           </Link>
+          <Link href="/budgets" className="block text-blue-600">
+            View budgets
+          </Link>
         </div>
       ) : (
         <div className="mt-8 space-y-2">
